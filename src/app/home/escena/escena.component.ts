@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 
-import { SentencesService } from 'src/app/services/sentences.service';
+import { SentencesService } from '../services/sentences.service';
 
 import { Sentence } from "../interfaces/Sentence";
 

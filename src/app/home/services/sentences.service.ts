@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
 
-import dataSentence from '../../assets/data/frases.json';
+import dataSentence from '../../../assets/data/frases.json';
 
-import { Sentence } from '../home/interfaces/Sentence';
+import { Sentence } from '../../home/interfaces/Sentence';
 
 
 

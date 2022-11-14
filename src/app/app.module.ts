@@ -5,7 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { EscenaComponent } from './home/escena/escena.component';
-import { SentencesService } from './services/sentences.service';
+import { SentencesService } from './home/services/sentences.service';
 
 @NgModule({
   declarations: [
