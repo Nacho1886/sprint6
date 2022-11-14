@@ -1,15 +1,24 @@
 <div class="container">
     <div class="row m-2 mb-5">
         <div class="w-50">
-            <button class="btn btn-primary w-100">pepe</button>
+            <button class="btn btn-outline-primary w-100"
+            (click)="prev()"
+            ><strong>Anterior</strong></button>
         </div>
         <div class="w-50">
-            <button class="btn btn-secondary w-100">pepe</button>
+            <button class="btn btn-outline-secondary w-100"
+            (click)="next()"
+            ><strong>Següent</strong></button>
         </div>
     </div>
 </div>
+
 <div class="container">
-    <p *ngFor="let sentence of sentences">
-        {{sentence.txt}}
+    <p *ngFor="let sentence of sentences"
+    [ngClass]="{
+        'backgroundOrange': sentence
+    }"
+    >
+        {{sentence.txt}} - {{currentSentence}}
     </p>
 </div>
