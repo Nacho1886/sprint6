@@ -13,19 +13,20 @@ export class EscenaComponent {
   
   currentIndexSentence: number = 0
 
-  currentSentence: string = this.sentences[this.currentIndexSentence].txt
-
   get sentences(): Sentence[] {return this.sentencesService.showSentences}
 
   next(): void {
     this.currentIndexSentence++
-    this.sentences[this.currentIndexSentence]
+    if (this.currentIndexSentence === 4) this.currentIndexSentence = 0
   }
-  prev(): void {this.currentIndexSentence--}
   
-  activeSentence(current: number): void {
-    this.currentIndexSentence = current;
-    this.sentences[this.currentIndexSentence]
+  prev(): void {
+    this.currentIndexSentence--
+    if (this.currentIndexSentence === -1) this.currentIndexSentence = 3
+  }
+  
+  activeSentence(): Sentence {
+    return this.sentences[this.currentIndexSentence];
   }
 
   constructor(

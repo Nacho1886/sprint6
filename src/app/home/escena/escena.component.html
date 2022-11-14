@@ -15,10 +15,7 @@
 
 <div class="container">
     <p *ngFor="let sentence of sentences"
-    [ngClass]="{
-        'backgroundOrange': sentence
-    }"
-    >
-        {{sentence.txt}} - {{currentSentence}}
+    [ngClass]="{backgroundOrange: activeSentence().txt === sentence.txt}">
+        {{sentence.txt}}
     </p>
 </div>
