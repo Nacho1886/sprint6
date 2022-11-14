@@ -1,4 +1,4 @@
-export interface Frase {
+export interface Sentence {
     txt: string,
     img: string
 }

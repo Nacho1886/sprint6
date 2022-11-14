@@ -4,7 +4,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
-import { EscenaComponent } from './Home/escena/escena.component';
+import { EscenaComponent } from './home/escena/escena.component';
+import { SentencesService } from './services/sentences.service';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,9 @@ import { EscenaComponent } from './Home/escena/escena.component';
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [
+    SentencesService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

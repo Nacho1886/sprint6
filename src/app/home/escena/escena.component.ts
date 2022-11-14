@@ -1,15 +1,21 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+
+import { SentencesService } from 'src/app/services/sentences.service';
+
+import { Sentence } from "../interfaces/Sentence";
 
 @Component({
   selector: 'app-escena',
   templateUrl: './escena.component.html',
   styleUrls: ['./escena.component.scss']
 })
-export class EscenaComponent implements OnInit {
+export class EscenaComponent {
+  
+  // this.sentences =
+  get sentences(): Sentence[] {return this.sentencesService.showSentences}
 
-  constructor() { }
 
-  ngOnInit(): void {
-  }
-
+  constructor(
+    private sentencesService: SentencesService
+  ) { }
 }
