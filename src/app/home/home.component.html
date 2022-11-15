@@ -1,3 +1,20 @@
-<div class="backgroundImage" [ngStyle]="{'background-image': 'url(' + currentSentence.img + ')'}">
-    <app-escena (currentSentence)="onChangeSentence($event)"></app-escena>
+<div class="container" *ngIf="showScene === false">
+    <div class="row justify-content-center align-items-center border-primary">
+        <div class="table-borderless card text-center justify-content-center align-items-center" style="width: 25rem;">
+            <div class="card-body">
+                <h2 class="card-title card-header"><strong>The Greatest History</strong></h2>
+                <div class="card-body">
+                    <p class="card-text">
+                    Lorem fistrum ese que llega te va a hasé pupitaa al ataquerl la caidita me cago en tus muelas ese pedazo de la caidita a peich. A gramenawer ese pedazo de la caidita ahorarr ahorarr condemor por la gloria de mi madre la caidita diodenoo no puedor la caidita. Te voy a borrar el cerito diodenoo pupita al ataquerl al ataquerl al ataquerl a peich no puedor. Va usté muy cargadoo benemeritaar tiene musho peligro jarl te voy a borrar el cerito condemor al ataquerl de la pradera. No puedor papaar papaar caballo blanco caballo negroorl de la pradera. Diodenoo quietooor no te digo trigo por no llamarte Rodrigor va usté muy cargadoo. Hasta luego Lucas jarl sexuarl jarl al ataquerl hasta luego Lucas quietooor.
+                    </p>
+                </div>
+            </div>
+            <button class="btn btn-danger" (click)="showScene = true">Show Scene</button>
+        </div>
+    </div>
+</div>
+<div *ngIf="showScene">
+    <div class="backgroundImage" [ngStyle]="{'background-image': 'url(' + currentSentence.img + ')'}">
+        <app-escena (currentSentence)="onChangeSentence($event)"></app-escena>
+    </div>
 </div>

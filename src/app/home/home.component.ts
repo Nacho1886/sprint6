@@ -7,6 +7,9 @@ import { Sentence } from '../interfaces/Sentence';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent {
+
+  showScene: boolean = false
+
   currentSentence:Sentence = { txt: '', img: '../../assets/img/1.jpg'};
   
   
