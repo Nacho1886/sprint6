@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 
 import { SentencesService } from '../services/sentences.service';
 
@@ -15,6 +15,10 @@ export class EscenaComponent {
 
   get sentences(): Sentence[] {return this.sentencesService.showSentences}
 
+  @Output() currentSentence: EventEmitter<Sentence> = new EventEmitter();
+
+
+
   next(): void {
     this.currentIndexSentence++
     if (this.currentIndexSentence === 4) this.currentIndexSentence = 0
@@ -26,6 +30,7 @@ export class EscenaComponent {
   }
   
   activeSentence(): Sentence {
+    this.currentSentence.emit(this.sentences[this.currentIndexSentence])
     return this.sentences[this.currentIndexSentence];
   }
 

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Sentence } from './interfaces/Sentence';
 
 @Component({
   selector: 'app-home',
@@ -7,5 +8,9 @@ import { Component } from '@angular/core';
 })
 export class HomeComponent {
 
-  constructor() { }
+  printBackground(sentence: Sentence): void {
+    console.log(sentence);
+    
+  }
+
 }
