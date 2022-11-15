@@ -1,4 +1,3 @@
-<div [ngStyle]="{'background-image': 'url(' + currentSentence.img + ')'}">
+<div class="backgroundImage" [ngStyle]="{'background-image': 'url(' + currentSentence.img + ')'}">
     <app-escena (currentSentence)="onChangeSentence($event)"></app-escena>
-    {{currentSentence.img}}
 </div>

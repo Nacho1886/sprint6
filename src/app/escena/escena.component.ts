@@ -19,7 +19,7 @@ export class EscenaComponent {
 
 
   next(): void {
-    this.currentIndexSentence++
+    this.currentIndexSentence++;
     if (this.currentIndexSentence === 4) this.currentIndexSentence = 0
     this.activeSentence();
   }

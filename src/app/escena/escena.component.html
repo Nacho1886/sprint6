@@ -1,5 +1,5 @@
 <div class="container">
-    <div class="row m-2 mb-5">
+    <div class="row pt-4 mb-5">
         <div class="w-50">
             <button class="btn btn-outline-primary w-100"
             (click)="prev()"
@@ -14,7 +14,8 @@
 </div>
 
 <div class="container">
-    <p *ngFor="let sentence of sentences; let i = index"
+    <p [ngStyle]="{'background-color': 'rgba(255, 255, 255, 0.6)'}"
+     *ngFor="let sentence of sentences; let i = index"
     [ngClass]="{backgroundOrange: currentIndexSentence === i}">
         {{sentence.txt}}
     </p>
