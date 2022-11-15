@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Sentence } from './interfaces/Sentence';
+import { Sentence } from '../interfaces/Sentence';
 
 @Component({
   selector: 'app-home',
