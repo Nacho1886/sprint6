@@ -7,7 +7,7 @@ import { Sentence } from '../interfaces/Sentence';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent {
-  currentSentence:Sentence = { txt: '', img: '../img/1.jpg'};
+  currentSentence:Sentence = { txt: '', img: '../../assets/img/1.jpg'};
   
   
   onChangeSentence(sentence: Sentence): void {
