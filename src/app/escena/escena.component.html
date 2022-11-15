@@ -14,8 +14,8 @@
 </div>
 
 <div class="container">
-    <p *ngFor="let sentence of sentences"
-    [ngClass]="{backgroundOrange: activeSentence().txt === sentence.txt}">
+    <p *ngFor="let sentence of sentences; let i = index"
+    [ngClass]="{backgroundOrange: currentIndexSentence === i}">
         {{sentence.txt}}
     </p>
 </div>

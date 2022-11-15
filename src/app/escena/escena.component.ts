@@ -18,20 +18,20 @@ export class EscenaComponent {
   @Output() currentSentence: EventEmitter<Sentence> = new EventEmitter();
 
 
-
   next(): void {
     this.currentIndexSentence++
     if (this.currentIndexSentence === 4) this.currentIndexSentence = 0
+    this.activeSentence();
   }
   
   prev(): void {
-    this.currentIndexSentence--
+    this.currentIndexSentence--;
     if (this.currentIndexSentence === -1) this.currentIndexSentence = 3
+    this.activeSentence();
   }
   
-  activeSentence(): Sentence {
+  activeSentence(): void {
     this.currentSentence.emit(this.sentences[this.currentIndexSentence])
-    return this.sentences[this.currentIndexSentence];
   }
 
   constructor(

@@ -7,10 +7,10 @@ import { Sentence } from '../interfaces/Sentence';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent {
-
-  printBackground(sentence: Sentence): void {
-    console.log(sentence);
-    
+  currentSentence:Sentence = { txt: '', img: '../img/1.jpg'};
+  
+  
+  onChangeSentence(sentence: Sentence): void {
+    this.currentSentence = sentence;
   }
-
 }
