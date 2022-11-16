@@ -15,7 +15,7 @@ export class EscenaComponent {
     private sentencesService: SentencesService
   ) { }
 
-  
+
   currentIndexSentence: number = 0
 
   get sentences(): Sentence[] {return this.sentencesService.showSentences}
