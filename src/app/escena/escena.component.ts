@@ -11,6 +11,11 @@ import { Sentence } from "../interfaces/Sentence";
 })
 export class EscenaComponent {
   
+  constructor(
+    private sentencesService: SentencesService
+  ) { }
+
+  
   currentIndexSentence: number = 0
 
   get sentences(): Sentence[] {return this.sentencesService.showSentences}
@@ -34,7 +39,4 @@ export class EscenaComponent {
     this.currentSentence.emit(this.sentences[this.currentIndexSentence])
   }
 
-  constructor(
-    private sentencesService: SentencesService
-  ) { }
 }

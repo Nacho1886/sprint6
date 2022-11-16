@@ -1,4 +1,4 @@
-<div class="container" *ngIf="showScene === false">
+<div class="container" *ngIf="sceneHidden; else show">
     <div class="row justify-content-center align-items-center border-primary">
         <div class="table-borderless card text-center justify-content-center align-items-center" style="width: 25rem;">
             <div class="card-body">
@@ -9,12 +9,14 @@
                     </p>
                 </div>
             </div>
-            <button class="btn btn-danger" (click)="showScene = true">Show Scene</button>
+            <button class="btn btn-danger" (click)="sceneHidden = false">Show Scene</button>
         </div>
     </div>
 </div>
-<div *ngIf="showScene">
-    <div class="backgroundImage" [ngStyle]="{'background-image': 'url(' + currentSentence.img + ')'}">
-        <app-escena (currentSentence)="onChangeSentence($event)"></app-escena>
+<ng-template #show>
+    <div>
+        <div class="backgroundImage" [ngStyle]="{'background-image': 'url(' + currentSentence.img + ')'}">
+            <app-escena (currentSentence)="onChangeSentence($event)"></app-escena>
+        </div>
     </div>
-</div>
+</ng-template>

@@ -8,7 +8,7 @@ import { Sentence } from '../interfaces/Sentence';
 })
 export class HomeComponent {
 
-  showScene: boolean = false
+  sceneHidden: boolean = true;
 
   currentSentence:Sentence = { txt: '', img: '../../assets/img/1.jpg'};
   
